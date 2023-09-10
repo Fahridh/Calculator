@@ -6,6 +6,10 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
+            background-image: url(Asset/backgroundmath.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
         }
         .calculator {
             width: 240px;
@@ -61,10 +65,10 @@
             <div id="display-content">0</div> 
         </div>
         <div class="buttons">
-            <button onclick="appendToDisplay('/')">/</button>
-            <div class="button" onclick="backspace()">⌫</div>
+            <div class="button" onclick="appendToDisplay('/')">/</div>
             <div class="button" onclick="appendToDisplay('(')">(</div>
             <div class="button" onclick="appendToDisplay(')')">)</div>
+            <div class="button" onclick="backspace()">⌫</div>
             <div class="button" onclick="appendToDisplay('7')">7</div>
             <div class="button" onclick="appendToDisplay('8')">8</div>
             <div class="button" onclick="appendToDisplay('9')">9</div>
@@ -120,6 +124,7 @@
                 currentInput = result.toString();
             } catch (error) {
                 display.textContent = 'Error';
+                currentInput = '';
             }
         }
 
